@@ -1,0 +1,109 @@
+.team-container {
+    text-align: center;
+    padding: 20px;
+
+  }
+  
+  .team-title {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    font-size: 40px;
+    color: black;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .team-member {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .member-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .member-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: aliceblue;
+  }
+  
+  .member-position {
+    font-size: 16px;
+    font-style: italic;
+    color: Black;
+    margin-bottom: 10px;
+    color: aliceblue;
+  }
+  
+  .member-description {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: bolder;
+    color: rgb(236, 225, 225);
+  }
+
+  .join-us-container {
+    margin-top: 10px;
+    padding: 4px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+  
+  .join-us-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .join-us-description {
+    margin-top: 10px;
+    color: #666666;
+  }
+  
+  .join-us-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .join-us-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-home-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .back-home-link i {
+    margin-right: 5px;
+  }
+  
+  .back-home-link:hover {
+    color: #333333;
+  }

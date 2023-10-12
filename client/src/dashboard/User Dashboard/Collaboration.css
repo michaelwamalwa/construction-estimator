@@ -1,0 +1,67 @@
+.collaboration-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .message-board {
+    flex: 1;
+    margin-right: 20px;
+    backdrop-filter: blur(10px);
+    height: 400px;
+   
+  }
+  
+  .features,
+  .document-sharing,
+  .task-assignment,
+  .file-attachments {
+    flex: 1;
+    margin-left: 20px;
+    backdrop-filter: blur(10px);
+    height: 400px;
+  }
+  
+  .message-list {
+    margin-bottom: 10px;
+  }
+  
+  .message-item {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f2f2f2;
+  }
+  
+  .message-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .message-input input[type="text"] {
+    flex: 1;
+    padding: 5px;
+  }
+  
+  .message-input button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .features ul,
+  .document-sharing ul,
+  .task-assignment ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .file-attachments p {
+    margin-top: 10px;
+  }
+  
+  /* Add more styles as needed */
+  

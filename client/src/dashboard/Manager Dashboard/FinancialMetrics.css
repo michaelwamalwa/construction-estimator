@@ -1,0 +1,35 @@
+/* FinancialMetrics.css */
+
+.financial-metrics-container {
+    width: 100%;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+  }
+  
+  .input-section {
+    margin-top: 20px;
+  }
+  
+  .input-section label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-section input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .output-section {
+    margin-top: 20px;
+  }
+  
+  .output-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .output-section p {
+    margin: 5px 0;
+  }
+  

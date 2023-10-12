@@ -1,0 +1,95 @@
+.user-management-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    backdrop-filter: blur(1000px);
+    height: 100;
+  }
+  
+  .user-list {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .user-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .user-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-input input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    flex: 1;
+  }
+  
+  
+  .user-input button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .user-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .user-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .user-list li.selected {
+    background-color: #f2f2f2;
+  }
+  
+  .user-list li button {
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  .user-settings {
+    flex: 1;
+  }
+  
+  .user-settings h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .settings-content {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+  }
+  
+  .no-user-selected {
+    font-style: italic;
+    color: #888;
+  }
+  

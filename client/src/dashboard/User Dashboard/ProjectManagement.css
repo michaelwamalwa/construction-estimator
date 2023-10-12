@@ -1,0 +1,82 @@
+.project-management-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .task-management,
+  .resource-management {
+    flex: 1 1 400px;
+    background-color: #f5f5f52c;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .task-management h2,
+  .resource-management h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .task-form,
+  .resource-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .task-form input,
+  .resource-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .task-list,
+  .resource-list {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .task-item,
+  .resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff2d;
+    border-radius: 4px;
+  }
+  
+  .task-item p,
+  .resource-item p {
+    margin: 0;
+  }
+  
+  .task-item button,
+  .resource-item button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-item button:hover,
+  .resource-item button:hover {
+    background-color: #45a049;
+  }
+  
+  .gantt-chart {
+    flex: 1 1 600px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* Add additional styles for the Gantt chart component as needed */
+  

@@ -1,0 +1,33 @@
+.resource-management {
+    margin: 20px;
+  }
+  
+  .resource-management h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .resource-management table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .resource-management th,
+  .resource-management td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .resource-management th {
+    font-weight: bold;
+  }
+  
+  .resource-management tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .resource-management button {
+    margin-right: 5px;
+  }
+  

@@ -1,0 +1,53 @@
+.document-management {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    backdrop-filter: blur(50px);
+  }
+  
+  .document-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .document-table th,
+  .document-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .document-table th {
+    font-weight: bold;
+  }
+  
+  .update-button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .update-button:hover {
+    background-color: #45a049;
+  }
+  
+  .version-control {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .version-control h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .version-control p {
+    font-size: 14px;
+    color: #666;
+  }
+  

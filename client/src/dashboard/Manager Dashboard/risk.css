@@ -1,0 +1,43 @@
+.risk-management {
+    padding: 20px;
+    backdrop-filter: blur(50px);
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

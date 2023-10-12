@@ -1,0 +1,86 @@
+.project-summary-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  backdrop-filter: blur(70px);
+  border-radius: 5px;
+}
+
+.project-summary-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-status,
+.project-deadline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-status label,
+.project-deadline label {
+  margin-right: 10px;
+}
+
+.project-status select {
+  flex: 1;
+  padding: 5px;
+}
+
+.project-deadline input {
+  flex: 1;
+  padding: 5px;
+}
+
+.project-milestones {
+  margin-bottom: 20px;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.milestone-item input {
+  flex: 1;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.milestone-item input[type="date"] {
+  flex: 1;
+  padding: 5px;
+  margin-right: 10px;
+  width: 150px; 
+}
+
+.milestone-item button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.output {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.output h3 {
+  margin-bottom: 10px;
+}
+
+.output pre {
+  white-space: pre-wrap;
+}

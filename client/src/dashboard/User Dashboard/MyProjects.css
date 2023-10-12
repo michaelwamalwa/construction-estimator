@@ -1,0 +1,51 @@
+.create-project-container {
+    max-width: 500px;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    backdrop-filter: blur(234px);
+  }
+  
+  .create-project-container h1 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .create-project-container form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .create-project-container form input[type="text"],
+  .create-project-container form textarea,
+  .create-project-container form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .create-project-container form select option {
+    padding: 12px;
+  }
+  
+  .create-project-container form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .create-project-container form button:hover {
+    background-color: #0069d9;
+  }
