@@ -1,0 +1,120 @@
+/* navigate.css */
+/* Assuming .page-container is the top-level div wrapping your page content */
+.page-container {
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    background-image: url('../images/Construction.jpg'); /* Update with your image path */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+  }
+  
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 2rem;
+   
+  }
+  
+  .brand {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Adjusted for consistency */
+  }
+  
+  .nav__menu {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .nav__menu.nav__active {
+    transform: translateX(0);
+  }
+  
+  .nav__item {
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav__item:hover {
+    background-color: #555;
+  }
+  
+  .nav-toggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-toggler .line1,
+  .nav-toggler .line2,
+  .nav-toggler .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: 0.3s;
+  }
+  
+  /* Animation for nav toggler */
+  .nav__menu.nav__active + .nav-toggler .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .nav__menu.nav__active + .nav-toggler .line2 {
+    opacity: 0;
+  }
+  
+  .nav__menu.nav__active + .nav-toggler .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav__menu {
+      position: absolute;
+      right: 0;
+      top: 60px;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      transform: translateX(100%);
+    }
+  
+    .nav-toggler {
+      display: block;
+    }
+  }
+  
+  /* Adding a fade-in effect for menu items */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nav__item {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  /* Dynamic hover effects for links */
+  .nav__item a:hover {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+  

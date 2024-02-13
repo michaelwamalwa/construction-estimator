@@ -5,6 +5,7 @@ import './AboutUs.css';
 
 const AboutUs = () => {
   return (
+    <div className='about-page'>
     <div className="about-us-container">
       <h2 className="about-us-title">JAY CONSTRUCTIONS</h2>
       <p className="about-us-description">
@@ -34,6 +35,7 @@ const AboutUs = () => {
         <Link to="/Register" className='cta-button'>GET STARTED</Link>
    
       </div>
+    </div>
     </div>
   );
 };

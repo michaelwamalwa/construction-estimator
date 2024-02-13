@@ -26,7 +26,7 @@ const UserDashboard = () => {
   useEffect(() => {
     async function checkLoginStatus () {
       try {
-        const response = await axios.get('http:localhost:8080/login');
+        const response = await axios.get('http:localhost:5000/login');
         if (response.status !== 200) {
           //User is not logged in, redirect to login page
           navigate('/login');

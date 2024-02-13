@@ -1,0 +1,111 @@
+/* Scoped to .login-page to avoid global style bleed */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../images/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box {
+  width: 550px;
+  padding: 40px;
+  background: #d06868;
+  text-align: center;
+  transition: 0.25s;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 20px;
+  padding: 0;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: fit-content !important;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #d9d9d9;
+  outline: none;
+  background: transparent;
+}
+
+.input-box .icon {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  padding: 10px;
+  color: #666;
+  transition: 0.3s;
+}
+
+.input-box input:focus + .icon,
+.input-box input:valid + .icon {
+  color: #d06868;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border-bottom: 2px solid #d06868;
+}
+
+button {
+  width: 100%;
+  background-color: #d06868;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #d06868;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+}
+
+.register-link p {
+  margin: 15px 0;
+}
+
+.register-link a {
+  color: #d06868;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Adding animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-box {
+  animation: slideUp 0.5s ease-out;
+}

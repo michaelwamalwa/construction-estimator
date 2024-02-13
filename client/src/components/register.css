@@ -1,0 +1,151 @@
+/* register.css */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../images/register.jpg);
+  color: #fff;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 35px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 16px;
+}
+
+.input-box .icon {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transform: translateY(50%);
+  color: #333;
+  font-size: 20px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5643fa;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4231f5;
+}
+
+.link-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.link-container a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link-container a:hover {
+  text-decoration: underline;
+}
+
+.success-message {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  background: rgba(0, 128, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: rotate 1s infinite linear;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Utilize isLoading state to control visibility */
+.loading-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.isLoading .loading {
+  display: block;
+}
+
+.isHidden .loading {
+  display: none;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: slideUp 0.5s ease-out;
+}
