@@ -1,23 +1,24 @@
 /* Scoped to .login-page to avoid global style bleed */
 .login-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url(../images/login.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../images/login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .login-box {
   width: 550px;
   padding: 40px;
-  background: #d06868;
+  background: orange;
   text-align: center;
   transition: 0.25s;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  animation: slideUp 0.5s ease-out;
 }
 
 .login-box h2 {
@@ -33,7 +34,7 @@
 }
 
 .input-box input {
-  width: fit-content !important;
+  width: 100%; /* Adjusted for mobile */
   padding: 10px;
   font-size: 16px;
   color: #333;
@@ -86,7 +87,7 @@ button:disabled {
 }
 
 .register-link a {
-  color: #d06868;
+  color: black;
   text-decoration: none;
 }
 
@@ -97,15 +98,31 @@ button:disabled {
 /* Adding animations */
 @keyframes slideUp {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+      opacity: 0;
+      transform: translateY(20px);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
-.login-box {
-  animation: slideUp 0.5s ease-out;
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .login-box {
+      width: 90%; /* Make the box take up most of the screen width */
+      padding: 20px; /* Reduce padding to save space */
+  }
+
+  .input-box input, .input-box .icon {
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .login-box h2 {
+      font-size: 18px; /* Adjust heading size for smaller screens */
+  }
+
+  button {
+      padding: 15px; /* Increase padding for easier interaction */
+  }
 }

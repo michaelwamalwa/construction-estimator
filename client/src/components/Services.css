@@ -70,3 +70,107 @@
 .link-button:hover {
   background-color: #555;
 }
+/* Add to Services.css */
+.service:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-title, .service-description {
+  transition: color 0.3s ease-in-out;
+}
+
+.service:hover .service-title, .service:hover .service-description {
+  color: orange; /* Choose a color that matches your theme */
+}
+
+.learn-more-btn {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  background-color: orange; /* Match your theme */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.learn-more-btn:hover {
+  background-color: darkorange; /* Darker shade for hover */
+}
+/* Services.css */
+
+.services-section {
+  padding: 40px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.services-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+  font-size: 48px;
+  color: #ff8c00; /* Orange color for icons */
+}
+
+.service-card h3 {
+  color: #333;
+}
+
+.service-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background-color: #ff8c00; /* Orange background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #e67600; /* Darker orange on hover */
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ff8c00; /* Orange link */
+  text-decoration: none;
+  border-bottom: 1px dashed #ff8c00;
+}
+
+.back-home:hover {
+  color: #e67600;
+  border-bottom-color: #e67600;
+}

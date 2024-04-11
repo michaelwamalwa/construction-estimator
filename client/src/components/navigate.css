@@ -1,120 +1,428 @@
 /* navigate.css */
 /* Assuming .page-container is the top-level div wrapping your page content */
 .page-container {
-    min-height: 100vh; /* Ensure it covers the full viewport height */
-    background-image: url('../images/Construction.jpg'); /* Update with your image path */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-  }
-  
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+}
+
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 0.5rem 2rem;
-   
-  }
-  
-  .brand {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 1rem; /* Adjusted for consistency */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 2rem;
+ z-index: 1000;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adjusted for consistency */
+}
+
+.nav__menu {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.nav__menu.nav__active {
+  transform: translateX(0);
+}
+
+.nav__item {
+  transition: background-color 0.3s ease;
+}
+
+.nav__item:hover {
+  background-color: #555;
+}
+
+.nav-toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggler .line1,
+.nav-toggler .line2,
+.nav-toggler .line3 {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* Animation for nav toggler */
+.nav__menu.nav__active + .nav-toggler .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav__menu.nav__active + .nav-toggler .line2 {
+  opacity: 0;
+}
+
+.nav__menu.nav__active + .nav-toggler .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .nav__menu {
-    list-style-type: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    transition: transform 0.5s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    transform: translateX(100%);
   }
-  
-  .nav__menu.nav__active {
+
+  .nav-toggler {
+    display: block;
+  }
+}
+
+/* Adding a fade-in effect for menu items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav__item {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Dynamic hover effects for links */
+.nav__item a:hover {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+/*Carousel*/
+.home{
+  width: auto;
+  height: auto;
+  max-height: fit-content;
+  align-items: center;
+  justify-content: center !important;
+}
+
+.carousel-inner> .item > img, 
+.carousel-inner > .item > a > img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+}
+.carousel{
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+.carousel-caption {
+    left: 7%;
+    right: 7%;
+    top: 70px;
+}
+.carousel-caption h1 {
+    color: #fff;
+    margin-bottom:20px;
+}
+.carousel-caption h1.second_heading {
+    color:#ffcb0f;
+    margin-bottom:35px;
+}
+.carousel-caption > h3 {
+    color: #fff;
+    font-family: "futura_ltbook",sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-transform: inherit;
+}
+.carousel-caption > p {
+    font-size: 23px;
+    line-height: 28px;
+}
+.btn.know_btn {
+    background: #ffcb0f none repeat scroll 0 0;
+    border-radius: 30px;
+    color: #fff;
+    font-family: "futura_ltbold",sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border:1px solid transparent;
+}
+.carousel-caption .btn.know_btn {
+    margin-top: 64px;
+}
+.carousel-caption .btn.know_btn:last-child {
+    margin-left: 20px;
+}
+.btn.know_btn:hover,
+.btn.know_btn:focus {
+    background: transparent;
+    color:#ffcb0f;
+    border:1px solid #ffcb0f;
+}
+.carousel-control{
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top:-25px;
+    top:50%;
+}
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden
+}
+
+.carousel-inner>.item {
+  position: relative;
+  display: none;
+  -webkit-transition: .6s ease-in-out left;
+  -o-transition: .6s ease-in-out left;
+  transition: .6s ease-in-out left
+}
+
+.carousel-inner>.item>a>img,.carousel-inner>.item>img {
+  line-height: 1
+}
+
+
+
+.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev {
+  display: block
+}
+
+.carousel-inner>.active {
+  left: 0
+}
+
+
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6)
+}
+
+.carousel-caption .btn {
+  text-shadow: none
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none; 
+  animation: slideIn 1s ease-in-out forwards;
+}
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.slide.active {
+  display: block; /* Show the active slide */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
     transform: translateX(0);
   }
-  
-  .nav__item {
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav__item:hover {
-    background-color: #555;
-  }
-  
-  .nav-toggler {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .nav-toggler .line1,
-  .nav-toggler .line2,
-  .nav-toggler .line3 {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-    transition: 0.3s;
-  }
-  
-  /* Animation for nav toggler */
-  .nav__menu.nav__active + .nav-toggler .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  
-  .nav__menu.nav__active + .nav-toggler .line2 {
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Add styles for .carousel-caption, .overlay, etc., according to your design preference */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.prev { left: 10px; } 
+.next { right: 10px; }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .carousel, .carousel-inner, .carousel-inner > .item {
+        height: 200px; /* Adjust based on your design */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .carousel, .carousel-inner, .carousel-inner > .item {
+        height: 400px; /* Adjust based on your design */
+    }
+}
+
+@media (min-width: 993px) {
+    .carousel, .carousel-inner, .carousel-inner > .item {
+        height: 600px; /* Adjust based on your design */
+    }
+}
+
+/*WHY US?*/
+.container1{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Title Styles */
+.head_title h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.head_title p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Item styles */
+.why_us_item {
+  text-align: center;
+  padding: 20px;
+  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.why_us_item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.why_us_item span {
+  font-size: 4rem;
+  display: inline-block;
+  margin-bottom: 20px;
+  animation: iconPop 1.5s ease-in-out infinite;
+}
+
+.why_us_item h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.why_us_item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
     opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .nav__menu.nav__active + .nav-toggler .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .nav__menu {
-      position: absolute;
-      right: 0;
-      top: 60px;
-      flex-direction: column;
-      width: 100%;
-      background-color: #333;
-      transform: translateX(100%);
-    }
-  
-    .nav-toggler {
-      display: block;
-    }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  /* Adding a fade-in effect for menu items */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .nav__item {
-    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes iconPop {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  /* Dynamic hover effects for links */
-  .nav__item a:hover {
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+
+  50% {
+    transform: scale(1.1);
   }
-  
+}

@@ -4,36 +4,43 @@ import './ManagerInformation.css'; // Import the CSS file
 
 const ManagerInformation = () => {
   // Define state variables
-  const [managerInfo, setManagerInfo] = useState(null); // Updated state initialization
-  const [loading, setLoading] = useState(true); // Initial loading state
+  const [managerInfo, setManagerInfo] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   // Fetch manager information from the server
   const fetchManagerInfo = () => {
-    setError(null);
-    // Send a GET request to retrieve manager information from the server
+    setError(null); // Reset the error state before fetching
+    setLoading(true); // Ensure loading state is true when fetching
     axios
-      .get('/managers')
+      .get('http://localhost:5000/manager-info')
       .then(response => {
-        // If the request is successful, update the state with the retrieved data
-        setManagerInfo(response.data);
+        setManagerInfo(response.data); // Update the state with the retrieved data
         setLoading(false);
       })
       .catch(error => {
-        // If an error occurs, set the error state with a message and stop loading
-        setError('Failed to fetch Manager information');
+        // Handle different types of errors
+        if (error.response) {
+          // The server responded with a status code outside the 2xx range
+          const message = error.response.data.message || 'Failed to fetch Manager information';
+          setError(message);
+        } else if (error.request) {
+          // The request was made but no response was received
+          setError('No response was received from the server');
+        } else {
+          // Something else caused the request to fail
+          setError('An unexpected error occurred');
+        }
         setLoading(false);
       });
   };
 
-  // Use the useEffect hook to fetch data when the component mounts
   useEffect(() => {
     fetchManagerInfo();
   }, []);
 
   return (
     <div className="manager-info">
-      {/* Display manager's personal information */}
       {loading && <p>Loading...</p>}
       {error && <p className="error">{error}</p>}
       {managerInfo && (

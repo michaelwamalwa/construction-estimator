@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  /* Example mobile-specific styles */
+  body {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
 }

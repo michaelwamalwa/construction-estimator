@@ -1,0 +1,87 @@
+/* Base styles for the contact page */
+.contact-page {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-title {
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.contact-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #ff8c00;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Ensures padding doesn't increase the width */
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #ff8c00;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e67600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 20px 10px; /* Reduced padding */
+  }
+
+  .contact-container {
+    padding: 15px; /* Reduced padding for the container */
+  }
+
+  .contact-method {
+    flex-direction: column; /* Stack contact methods vertically */
+  }
+
+  .contact-icon {
+    margin: 0 auto 10px; /* Center icon above text */
+  }
+
+  .contact-form button {
+    font-size: 14px; /* Slightly smaller font size for the button */
+  }
+}
